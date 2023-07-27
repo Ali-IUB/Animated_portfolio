@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="shortcut icon" href="assests/images/16 logo.png" type="image/x-icon">
+    <style>
+        .container {
+            width: 100%;
+            height: 95vh;
+            background-color: blueviolet;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: relative;
+            width: 5%;
+            height: 66px;
+            background-color: brown;
+            animation-name: ali;
+            animation-delay: .3s;
+            animation-duration: 1s;
+            animation-iteration-count: 44;
+            /*animation-fill-mode: forwards;
+            animation-timing-function:ease-in-out;
+            animation-direction: reverse; */
+        }
+
+        @keyframes ali {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                top: 0px;
+                left: 90%;
+                width:100%   
+            }
+
+            50% {
+                top: 90%;
+                left: 90%;
+                height: 95vh;
+            }
+
+            90% {
+                top: 90%;
+                left: 0px;
+                width: 90%;
+                height: 95vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Hi</div>
+    </div>
+
+
+</body>
+
+</html>

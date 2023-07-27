@@ -1,0 +1,217 @@
+
+:root{
+    --c-dark:#212529;
+    --c-brand:#4e57d4;
+    --c-brand-light:#6b72d8;
+    --c-brand-rgb:78, 87, 212;
+    --c-body:#727272;
+    --font-base:'fontawesome','sans-serif';
+    --box-shadow:0px 15px 25px rgba(var(--c-brand-rgb),0.28);
+    --transition:all 0.5s ease;
+}
+@font-face {
+    font-family:'fontawesome';
+    src: url(../font/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family:'abeezee';
+    src: url(../font/abeezee/ABeeZee-Regular.ttf);
+}
+.fawesome{
+        font-family: 'fontawesome';
+}
+h1,h2{
+    font-family: 'abeezee'!important;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'fontawesome' !important;
+}
+
+
+
+/* ----------- */
+body{
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+a:hover{
+    color: var(--c-brand-light);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.section-padding{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+.btn-brand{
+    background-color: var(--c-brand);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+.theme-shadow{
+    box-shadow: var(--box-shadow);
+}
+
+/* THis is Generalll */
+.navbar-nav .nav-link{
+    font-weight: 500;
+    color: var(--c-dark);
+}
+.navbar-nav .nav-link .active{
+    color: var(--c-brand);
+}
+
+/* ==hero--------- */
+
+#hero{
+    background:linear-gradient( rgba(var(--c-brand-rgb),0.57) ,rgba(var(--c-brand-rgb),0.57) ) ,url(../images/work-1.png);
+    background-size: cover;
+    background-position: center;
+}
+.section-title .line{
+    width: 80px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto;
+
+}
+.section-title p{
+    color: #212529ad;
+    margin-bottom: 10px;
+}
+
+/* -------------------About-------- */
+.icobox{
+    width: 60px;
+    height: 50px;
+    background:#8387ce18;
+    margin-right: 12px;
+}
+.icobox img{
+    width: 55px;
+    height: 55px;
+    padding: 2px;
+    border-radius: 2px;
+
+}
+.intro-text{
+    color:#6b72d8c9;
+    font-weight: 700;
+    text-shadow:0px 1px #6b72d8 ;
+}
+/* SErvices */
+.service{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+.service::after{
+    content: " ";
+    width: 40px;
+    height: 40px;
+    background: rgba(var(--c-brand-rgb),0.61);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+}
+
+.service:hover::after{
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--c-brand-rgb),0.91);
+    z-index: -1;
+}
+.service:hover h5 {
+    color: rgb(255, 255, 255);
+}
+.service:hover p {
+    color: rgba(255, 255, 255, 0.747)!important;
+}
+
+ /* Counter */
+ #counter{
+    background:linear-gradient( rgba(var(--c-brand-rgb),0.57) ,rgba(var(--c-brand-rgb),0.57) ) ,url(../images/Certificate.png);
+    background-size: cover;
+    background-position:bottom;
+
+ }
+
+
+
+
+/*  */
+.image-zoom{
+    position: relative;
+    overflow: hidden;
+
+}
+.image-zoom-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.image-zoom-wrapper img{
+    transition: var(--transition);
+
+}
+.image-zoom:hover .image-zoom-wrapper img{
+    transform: scale(1.1);
+}
+.potfolio-item .icobox{
+        position: absolute;
+        background:rgba(255, 255, 255, .661);
+        border-radius: 8px;
+        bottom: 40%;
+        right: 40%;
+        transform: translate(-50% -90%);
+        opacity: 30%;
+        transition: 2s;
+}
+.potfolio-item:hover .icobox{
+    opacity: 100%;
+    top: 42%;
+}
+/* Media Query For About */
+
+@media (min-width:300px) and (max-width:768px) {
+            #about .intro-text{
+                display:block;
+                text-align:center;
+                margin-top:20px ;
+            }
+            #about .intro-para{
+                display: inline-flex;
+                text-align: center;
+            }
+            #about .icobox{
+                width: 80px;
+                background: none;
+            }
+}
+
+
+/* Counter */
+@media (min-width:300px)and (max-width:576px)
+{
+        #counter .container{
+            margin-top: 190px;
+        }
+        #container .queryclass{
+            padding-bottom: 20px;
+        }
+}
